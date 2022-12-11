@@ -1,3 +1,5 @@
+extern crate core;
+
 mod parser;
 use chrono::prelude::*;
 use clap::{Parser, Subcommand};

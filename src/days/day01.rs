@@ -22,16 +22,11 @@ impl Day for Day01 {
     type Output1 = usize;
 
     fn part_1(input: &Self::Input) -> Self::Output1 {
-        let mut high_elf = 0;
         let mut high_elf_calories = 0;
-        for (i, x) in input.iter().enumerate() {
-            //println!("Item {} = {:?}", i, x);
+        for x in input.iter() {
             let total = x.iter().sum();
-            // println!("{total}");
             if total > high_elf_calories {
                 high_elf_calories = total;
-                high_elf = i;
-                // println!("{} {}", high_elf, high_elf_calories);
             }
         }
         high_elf_calories
